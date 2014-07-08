@@ -16,7 +16,7 @@
 (defprotocol Monad
   (>>= [mv f]))
 
-(defn then [ma mb]
+(defn >> [ma mb]
   (>>= ma (fn [_] mb)))
 
 (defmulti return (fn [f _] f))
