@@ -12,7 +12,7 @@ Inspired by the great tutorial by Leonardo Borges: [Monads in small bites][tutor
 Add this to your `project.clj` dependencies:
 
 ```clojure
-[funk "0.1.0-SNAPSHOT"]
+[funk "0.1.0"]
 ```
 
 ### Implementing the Maybe Monad with funk
