@@ -115,12 +115,6 @@ composition, homomorphism and interchange) with
 
 (deftest list-applicative-functor-test
   (testing "List is a lawful applicative functor"
-    (defmethod pure List [_ v]
-      (List. [v]))
-    (defmethod <*> List [fs xs]
-      (List. (for [f (:wrapped fs)
-                   x (:wrapped xs)]
-               (f x))))
     (let [functor (List. [1 2 3])
           f inc
           g (partial * 2)
@@ -168,7 +162,7 @@ and the multimethod `return` for our List.
   Monad
   (>>= [mv f]
     (if (seq (:wrapped mv))
-      #_(List. []) (mconcat (map f (:wrapped mv)))
+      (mconcat (map f (:wrapped mv)))
       (List. []))))
 
 (defmethod return List [_ v]

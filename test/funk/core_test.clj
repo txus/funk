@@ -68,7 +68,7 @@
       Monad
       (>>= [mv f]
         (if (seq (:wrapped mv))
-          #_(List. []) (mconcat (map f (:wrapped mv)))
+          (mconcat (map f (:wrapped mv)))
           (List. []))))
     (defmethod return List [_ v]
       (List. [v]))
