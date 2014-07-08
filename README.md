@@ -1,4 +1,4 @@
-# funk
+# funk [![Build Status](https://travis-ci.org/txus/funk.png)](https://travis-ci.org/txus/funk)
 
 An implementation of functors, applicative functors and monads on top of
 Clojure records, protocols and multimethods.
